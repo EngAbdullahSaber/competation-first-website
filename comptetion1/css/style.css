@@ -1,0 +1,339 @@
+/*Some Classes used as Template Like bootstrap */
+.container{
+
+}
+
+
+
+
+
+
+
+/* Start  Spinner Style*/
+html{
+    overflow: hidden;
+}
+.loading{
+    background: #222;
+    color: #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    
+}
+#global{
+    width:70px;
+    margin:auto;
+    margin-top:300px;
+    position:relative;
+    cursor:pointer;
+    height:60px;
+}
+.mask{
+    position:absolute;
+    border-radius:2px;
+    overflow:hidden;
+    perspective: 1000;
+    backface-visibility: hidden;
+}
+.plane{
+  background:#ffffff;
+  width:400%;
+  height:100%;
+  position:absolute;
+  transform : translate3d(0px,0,0);
+  z-index:100;
+  perspective: 1000;
+  backface-visibility: hidden;
+}
+.animation{
+  transition: all 0.3s ease;
+}
+#top .plane{
+  z-index:2000;
+  animation : trans1 1.3s ease-in infinite  0s backwards;
+}
+#middle .plane{
+  transform : translate3d(0px,0,0);  
+  background : #bbbbbb;
+  animation : trans2 1.3s linear infinite  0.3s  backwards;
+
+}
+#bottom .plane{
+  z-index:2000;
+  animation : trans3 1.3s ease-out infinite  0.7s backwards;
+}
+#top{
+  width:53px;
+  height:20px;
+  left:20px;
+  transform: skew(-15deg, 0);
+  z-index:100;
+}
+#middle{
+  width:33px;
+  height:20px;
+  left:20px;
+  top:15px;
+  transform: skew(-15deg, 40deg)
+}
+#bottom{
+  width:53px;
+  height:20px;
+  top:30px;  
+  transform: skew(-15deg, 0)
+}
+.loading p{
+    color: #d7c6c6;
+    position: absolute;
+    left: -3px;
+    top: 65px;
+    font-family: Arial;
+    text-align: center;
+    font-size: 16px;
+}
+@keyframes trans1{ 
+  from { 
+    transform : translate3d(53px,0,0)
+  }
+  to { 
+    transform : translate3d(-250px,0,0)
+  }
+}
+@keyframes trans2{ 
+  from { 
+    transform : translate3d(-160px,0,0)
+  }
+  to { 
+    transform : translate3d(53px,0,0)
+  }
+}
+@keyframes trans3{ 
+  from { 
+    transform : translate3d(53px,0,0)
+  }
+  to { 
+    transform : translate3d(-220px,0,0)
+  }
+}
+@keyframes animColor{ 
+  from { 
+    background : red;
+  }
+  25%{
+    background : yellow;
+  }
+  50%{
+    background : green;
+  }
+  75%{
+    background : brown;
+  }
+  to { 
+    background : blue;
+  }
+}
+/* End Spinner Style*/
+
+/*Start Navbar Style*/
+.navbar .logo{
+    width: 114px;
+    height: 65px;
+}
+.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link {
+    color: rgb(175 175 175 / 90%);
+    border-bottom: 3px solid rgb(175 175 175 / 90%);
+}
+.login-img{
+  position:relative;
+}
+.login-button{
+  position: absolute;
+  right: 59px;
+}
+/*End Navbar Style*/
+/*Start Header Section Style*/
+.header{
+    background-color:#e5f4fb;
+    position: relative;
+    color: #808080;
+    height: 24rem;
+}
+.header::after {
+    content: "";
+    position: relative;
+    top: 0;
+    display: block;
+    height: 15rem;
+    width: 100%;
+    background-image: url(../img/blue_bg.png);
+    background-size: 114% 100%;
+    background-color: #fff;
+    transform: scaleY(3.5);
+    z-index: -1;
+}
+.header .content{
+    position:absolute;
+    bottom: -144px;
+}
+.header span  {    color: #3b2180;}
+.header img:first-child{
+    position: relative;
+    width: 100%;
+    height: 76%;
+    display: block;
+    bottom: -86px;
+    margin-left: 0;
+}
+.header .person  {
+    position: absolute;
+    top: 134px;
+    right: 201px;
+    width: 19%;
+    height: 64%;
+    display: block;
+    margin: auto;
+    z-inex: 3;
+  }
+  .header img:last-child  {
+    position: absolute;
+    bottom: -16px;
+    right: 147px;
+    width: 26%;
+    height: 28%;
+    display: block;
+    margin: auto;
+}
+/*End Header Section Style*/
+/*Start Services Section Style*/
+.services{
+    height:900px;
+    position:relative;
+    width: 100%;
+}
+.services::before {
+    content: "";
+    position: relative;
+    top: 20px;
+    display: block;
+    height: 13rem;
+    left: -19%;
+    width: 100%;
+    background-image: url(../img/waves.png);
+    background-size: 100% 100%;
+  }
+.service-item{
+    height:800px;
+    color: #808080;
+}
+.services .line  {
+    position: absolute;
+    z-index: 1;
+    bottom: 38px;
+    left: 225px;
+    width: 78%;
+    transform: rotate(4deg);
+}
+.services .card img{
+    width: 48%;
+    margin:auto;
+    display:block;
+}
+.card-middle{bottom:50px}
+.services .card .card-img{
+    z-index:2;
+}
+.services .company-name img{
+    position: absolute;
+    bottom: -286px;
+    left: 71px;
+    width: 27%;
+}
+.services .name{
+    position: absolute;
+    display: inline;
+    bottom: -170px;
+    left: 164px;
+    color: #fff;
+}
+/*End Services Section Style*/
+/*Start Support Section Style*/
+.support{
+    margin-top:10rem;
+    color: #808080;
+}
+.support img{
+    width:75%;
+}
+.support i{
+    position: relative;
+    bottom: -80px;
+}
+/*End Support Section Style*/
+/*Start Footer Style*/
+footer{
+    overflow:hidden;
+    position:relative;
+    height:500px;
+}
+footer .img-footer {
+    position: absolute;
+    background: url(../img/footer.png) no-repeat center center;
+    background-size: cover;
+    width: 109%;
+    left: -28px;
+}
+footer .help::after {
+    content: "";
+    position: relative;
+    bottom: -114px;
+    display: block;
+    height: 25rem;
+    width: 170%;
+    left: -236px;
+    background-image: url(../img/people.png);
+    background-size: 100% 100%;
+}
+footer .footer-content{
+    position: relative;
+    bottom: -248px;
+}
+footer .android-button,
+footer .iphone-button {
+    width: 18%;
+    text-decoration: none;
+    border-radius: 9px;
+    color: #808080;
+}
+footer .android-button img,
+footer .iphone-button img{    height: 60%; margin:auto;}
+footer .android-button p:first-child,
+footer .iphone-button p:first-child { font-size:.7rem }
+footer .android-button p:last-child,
+footer .iphone-button p:last-child { font-size:.8rem}
+footer .icons-list{
+    display: flex;
+    flex-direction: row;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    width: 100%;
+}
+footer .icons img{
+    width: 18px;
+    height: 20px;
+    margin-right: 17px;
+}
+footer .links ul{
+    display: flex;
+    flex-direction: row;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    width: 100%;
+    height: 102px;
+}
+/*End Footer Style*/
